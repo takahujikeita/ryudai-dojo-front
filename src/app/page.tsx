@@ -7,7 +7,7 @@ export default async function Home() {
       </div>
     );
   }
-  const res = await fetch(apiUrl);
+  const res = await fetch(apiUrl,{cache: "no-store"});
   const data = await res.text();
 
   return (
